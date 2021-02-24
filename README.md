@@ -43,6 +43,7 @@ change that line.  These will be referenced by each job, so changes here will ch
 workflow.
 
 **4. Run it!**
+
 After your email is entered, your input data is linked in, and you have set up the config file, 
 you are ready to run! Simply do the following:
 
