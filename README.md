@@ -7,17 +7,24 @@ where EMAIL is your email address.
 
 what this command means:
 find		software to find files matching a pattern
+
 .		search within this entire folder and all subfolders
+
 -name Run*	search for files with names that begin with "Run", which is what I name 
 		all the job scripts.
+		
 -exec		run this command for each file found
+
 sed -i		sed is a program to find and replace text, -i makes it write in place
+
 's/A/B/g'	substitute A for B throughout the file
+
 {} \;		the found file names will be replaced here
 
 So, this line is replacing all instances of "youremailhere@gmail.com" with your actual email!
 
 2) Please link your input file directory here with:
+
 ln -s /location/of/your/data input_data
 
 where /location/of/your/data is the location of your data.  This can be found by navigating to the 
@@ -41,6 +48,7 @@ workflow.
 you are ready to run! Simply do the following:
 
 cd 1a_ProcessScans
+
 qsub RunProcessScans.sh
 
 This will output a report to the reports folder, and automatically launch subsequent jobs.  You can 
