@@ -1,6 +1,8 @@
-Welcome to the NCGAS workflow conversion for dimspy!
+## Welcome to the NCGAS workflow conversion for dimspy!
 
-1. Please set up your email address.  You can do this for all jobs at once by running:
+**1. Setting up your email**
+
+Please set up your email address.  You can do this for all jobs at once by running:
 find . -name Run* -exec sed -i 's/youremailhere@gmail.com/EMAIL/g' {} \;
 
 where EMAIL is your email address.
@@ -23,7 +25,7 @@ sed -i		sed is a program to find and replace text, -i makes it write in place
 
 So, this line is replacing all instances of "youremailhere@gmail.com" with your actual email!
 
-1. Please link your input file directory here with:
+**2. Please link your input file directory**
 
 ln -s /location/of/your/data input_data
 
@@ -34,7 +36,8 @@ You MUST be in the dimspy folder when you run this command!
 This will create a shortcut to your raw files in a directory that the workflow will find.  Make sure
 you have a file named filename.txt in this folder that describes the files as before.
 
-3) Check the samples.conf file!
+**3. Check the samples.conf file!**
+
 This is the set up file for the jobs.  The first couple lines require full paths - please update these
 to match where you are running the data.  Running the command "pwd" in the same directory as samples.conf
 will give you the full path for your current location.
@@ -44,7 +47,8 @@ you have more replicates, make sure to change that line.  If you want to adjust 
 change that line.  These will be referenced by each job, so changes here will change across the full
 workflow.
 
-1. After your email is entered, your input data is linked in, and you have set up the config file, 
+**4. Run it!**
+After your email is entered, your input data is linked in, and you have set up the config file, 
 you are ready to run! Simply do the following:
 
 cd 1a_ProcessScans
